@@ -26,7 +26,7 @@ const About = () => {
       month: date.getMonth(),
       year: time.year,
     })
-  },[date])
+  },)
   
   return (
     

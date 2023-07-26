@@ -1,41 +1,25 @@
-'use client'
+"use client";
 
-import { motion } from "framer-motion"
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-
 const About = () => {
-
   const date = new Date();
-  const [time, settime] = useState({
-    day: Math.abs(date.getDate() - 18 ),
+  const time = {
+    day: Math.abs(date.getDate() - 18),
     month: Math.abs(date.getMonth() - 8 + 13),
     year: Math.abs(date.getFullYear() - 2000 - 1),
     hour: date.getHours(),
     minute: date.getMinutes(),
     second: date.getSeconds(),
-
-  })
-
-  useEffect(() => {
-    settime({
-      second: date.getSeconds(),
-      minute: date.getMinutes(),
-      hour: date.getHours(),
-      day: date.getDate(),
-      month: date.getMonth(),
-      year: time.year,
-    })
-  },)
+  }
   
+  
+
   return (
-    
-    <section
-      id="about"
-      className="h-full bg-[#181527] overflow-hidden"
-    >
-      <div id="wor" className=" p-5">
-        <div className="xl:mx-auto ml-10 w-[1200px]">
+    <section id="about" className="h-full bg-[#181527] overflow-auto">
+      <div id="about1" className="relative p-5">
+        <div className="xl:mx-auto ml-10 xl:w-[1200px]">
           <div className="circle w-[11px] h-[11px] border-[#5918df] border-[2px] solid rounded-full -m-[5px] -my-[9px]"></div>
 
           <div className="ml-7">
@@ -48,83 +32,192 @@ const About = () => {
               About/&gt;
             </motion.div>
           </div>
-          <div className="-ml-10 deactivate">
-          <div><span>01</span><span className="ml-11 text-blue-600">class</span> <span className="text-yellow-400">RiTik Jaiswal</span></div>
-          <div><span>02</span><span className="ml-11">&nbsp;&nbsp;&nbsp;&nbsp;// I can, because I did.</span></div>
-              <div className="inline-flex"><span>03</span><span className="ml-11">&nbsp;&nbsp;&nbsp;&nbsp;// My vast variety of skills is continuously expanding.</span></div>
-              <div><span>04</span><span className="ml-11 text-blue-600">&nbsp;&nbsp;&nbsp;&nbsp;constructor <span className="text-white">() {"\u007B"}</span> </span></div>
-              <div><span>05</span><span className="ml-11 text-red-600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this<span className="text-white">.</span></span><span className="text-[#24e33a]">name <span className="text-red-500">= <span className="text-[#24e33a]">&apos;RiTik Jaiswal&apos;</span></span></span></div>
-              <div><span>06</span><span className="ml-11 text-red-600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this<span className="text-white">.</span></span><span className="text-[#24e33a]">Day_Of_Birth_TimeStamp <span className="text-red-500">= <span className="text-yellow-600">{time.year}Y&nbsp;:&nbsp;{time.month}M&nbsp;:&nbsp;{time.day}D&nbsp;:&nbsp;{time.hour}H&nbsp;:&nbsp;{time.minute}M&nbsp;:&nbsp;{time.second}S</span></span></span></div>
-              <div><span>07</span><span className="ml-11 text-red-600">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;this<span className="text-white">.</span></span><span className="text-[#24e33a]">email <span className="text-red-500">= <span className="text-[#24e33a]">&apos;Ritikj713@gmail.com&apos;</span></span></span></div>
-              <div><span>08</span><span className="ml-11 text-white">&nbsp;&nbsp;&nbsp;&nbsp;{"\u007D"}</span></div>
-              <div><span>09</span><span className="ml-11 text-yellow-400">&nbsp;&nbsp;&nbsp;&nbsp;Educaion</span> <span className="text-white">() {"\u007B"}</span></div>
-              <div><span>10</span><span className="ml-11 text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return &nbsp;</span> <span className="text-white">[</span></div>
-              <div><span>11</span><span className="ml-11 text-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"\u007B"} &nbsp; <span className="text-[#24e33a]">&apos; 2020 - 2024 &apos;</span> &nbsp; : <span className="text-[#24e33a]"> &nbsp; &apos; Inderprastha Engineering College - Bachelor Degree in Computer Science  &apos;</span> &nbsp; {"\u007D"}, </span></div>
-              <div><span>12</span><span className="ml-11 text-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"\u007B"} &nbsp; <span className="text-[#24e33a]">&apos; 2018 - 2019 &apos;</span> &nbsp; : <span className="text-[#24e33a]"> &nbsp; &apos; St Xaiver&apos;s School Salempur Uttar Pardesh &apos;</span> &nbsp; {"\u007D"}, </span></div>
-              <div><span>13</span><span className="ml-11 text-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{"\u007B"} &nbsp; <span className="text-[#24e33a]">&apos; 2016 - 2017 &apos;</span> &nbsp; : <span className="text-[#24e33a]"> &nbsp; &apos; St Xaiver&apos;s School Salempur Uttar Pardesh &apos;</span> &nbsp; {"\u007D"}, </span></div>
-              <div><span>14</span><span className="ml-11 text-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;] </span> </div>
-              <div><span>15</span><span className="ml-11 text-white">&nbsp;&nbsp;&nbsp;&nbsp;{"\u007D"} </span> </div>
-              <div><span>16</span><span className="ml-11 text-yellow-400">&nbsp;&nbsp;&nbsp;&nbsp;Skills</span> <span className="text-white">() {"\u007B"}</span></div>
-              <div><span>17</span><span className="ml-11 text-blue-500">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return &nbsp;</span> <span className="text-white">[</span></div>
-              <div><span>18</span><span className="ml-11 text-white flex-wrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <span className="text-[#24e33a]">&apos;&nbsp; HTML &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; CSS &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; Node.js &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; React &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; Next.js &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; Tailwind &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; GIT &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; MongoDB &nbsp;&apos;,&nbsp;&nbsp;</span>
-
- 
-              </span></div>
-              <div><span></span><span className="ml-11 text-white flex-wrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              <span className="text-[#24e33a]">&apos;&nbsp; Django &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; JavaScript &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; C++ &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp;Python &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; Framer Motion &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; JWT &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; Java &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; TypeScript &nbsp;&apos;,&nbsp;&nbsp;</span>
-
+          <div className="-ml-7 deactivate font-bold text-[13px] sm:text-[17px] font-mono">
+            <div>
+              <span>01</span>
+              <span className="ml-11 text-blue-600">class</span>{" "}
+              <span className="text-yellow-400">RiTik Jaiswal</span>
+            </div>
+            <div className="inline-flex">
+              <span>02</span>
+              <span className="ml-11">&nbsp;{" //"}I can, because I did.</span>
+            </div>
+            <div className="flex">
+              <span>03</span>
+              <span className="ml-11">
+                &nbsp;{" //"} My vast variety of skills is continuously
+                expanding.
+              </span>
+            </div>
+            <div>
+              <span>04</span>
+              <span className="ml-11 text-blue-600">
+                &nbsp; Constructor{" "}
+                <span className="text-white">() {"\u007B"}</span>{" "}
+              </span>
+            </div>
+            <div className="inline-flex">
+              <span>05</span>
+              <span className="ml-11 text-red-600">
+                &nbsp; &nbsp; this
+                <span className="text-white">.</span>
+              </span>
+              <span className="text-[#24e33a]">
+                name{" "}
+                <span className="text-red-500">
+                  ={" "}
+                  <span className="text-[#24e33a]">
+                    &apos;RiTik Jaiswal&apos;
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div className="flex">
+              <span>06</span>
+              <span className="ml-11 text-red-600">
+                &nbsp; &nbsp; this
+                <span className="text-white">.</span>
+              </span>
+              <span className="text-[#24e33a]">
+                Day_Of_Birth_TimeStamp{" "}
+                <span className="text-red-500">
+                  ={" "}
+                  <span className="text-yellow-600">
+                    {time.year}Y:{time.month}M:{time.day}D:{time.hour}H:{time.minute}M
+                  </span>
+                </span>
+              </span>
+            </div>
+            <div className="flex">
+              <span>07</span>
+              <span className="ml-11 text-yellow-400">
+                &nbsp; &nbsp; Educaion
+              </span>{" "}
+              <span className="text-white">() {"\u007B"}</span>
+            </div>
+            <div className="flex">
+              <span>08</span>
+              <span className="ml-11 text-blue-500">
+                &nbsp; &nbsp; &nbsp; return&nbsp;
+              </span>{" "}
+              <span className="text-white">[</span>
+            </div>
+            <div className="flex">
+              <span>09</span>
+              <span className="ml-11 text-white">
+                &nbsp; &nbsp; &nbsp; &nbsp; {"\u007B"}
+                <span className="text-[#24e33a]">&apos;2020 - 2024&apos;</span>
+                &nbsp;:
+                <span className="text-[#24e33a]">
+                  {" '"}Inderprastha Engineering College - Bachelor Degree in
+                  Computer Science&apos;
+                </span>
+                {"\u007D"},{" "}
+              </span>
+            </div>
+            <div className="flex">
+              <span>10</span>
+              <span className="ml-11 text-white">
+                &nbsp; &nbsp; &nbsp; &nbsp; {"\u007B"}
+                <span className="text-[#24e33a]">&apos;2018 - 2019&apos;</span>
+                &nbsp;:
+                <span className="text-[#24e33a]">
+                  &nbsp;&apos;St Xaiver&apos;s School Salempur Uttar
+                  Pardesh&apos;
+                </span>
+                {"\u007D"},{" "}
+              </span>
+            </div>
+            <div className="flex">
+              <span>11</span>
+              <span className="ml-11 text-white">
+                &nbsp; &nbsp; &nbsp; &nbsp; {"\u007B"}
+                <span className="text-[#24e33a]">&apos;2016 - 2017&apos;</span>
+                &nbsp;:
+                <span className="text-[#24e33a]">
+                  &nbsp;&apos;St Xaiver&apos;s School Salempur Uttar
+                  Pardesh&apos;
+                </span>
+                {"\u007D"},
+              </span>
+            </div>
+            <div className="flex">
+              <span>12</span>
+              <span className="ml-11 text-white">
+                &nbsp; &nbsp;&nbsp;&nbsp;{" ]"}
+              </span>{" "}
+            </div>
+            <div>
+              <span>13</span>
+              <span className="ml-11 text-white">&nbsp; &nbsp;{" }"}</span>{" "}
+            </div>
+            <div>
+              <span>14</span>
+              <span className="ml-11 text-yellow-400">
+                &nbsp; &nbsp; Skills
+              </span>{" "}
+              <span className="text-white">() {"\u007B"}</span>
+            </div>
+            <div className="flex ">
+              <span>15</span>
+              <span className="ml-11 text-blue-500">
+                &nbsp; &nbsp; &nbsp; return&nbsp;
+              </span>{" "}
+              <span className="text-white">[</span>
+            </div>
+            <div className="flex">
+              <span>16</span>
+              <span className="ml-11 text-white">
+                &nbsp; &nbsp; &nbsp; &nbsp; {"\u007B"}
+                <span className="text-[#24e33a]">
+                  {"'"}HTML{"', '"}CSS{"', '"}Node.js{"', '"}React{"', '"}
+                  Next.js{"', '"}TailwindCSS{"',"}
+                </span>
                 
-              </span></div>
-              <div><span></span><span className="ml-11 text-white flex-wrap">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-              
-                <span className="text-[#24e33a]">&apos;&nbsp; GTA V &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; Pubg &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; animation &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; animation &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; animation &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <span className="text-[#24e33a]">&apos;&nbsp; animation &nbsp;&apos;,&nbsp;&nbsp;</span>
-                <motion.div 
+              </span>
+            </div>
+            <div className="flex">
+              <span>17</span>
+              <span className="ml-11 text-white">
+              &nbsp;{" "}&nbsp;{" "}&nbsp;{" "}&nbsp;{" "}&nbsp;
+                <span className="text-[#24e33a]">
+                {"'"}GIT{"', '"}JAVA{"', '"}C++
+                  {"', '"}Python{"', '"}JavaScript{"', '"}Docker{"',"}
+                  <motion.div 
                   className="text-white inline-block"
                   initial={{opacity:0 }}
                   animate={{opacity:1}}
-                  transition={{repeat:Infinity, duration:1, type:"just"}}
-                  
+                  transition={{repeat:Infinity, duration:1, type:"just"}} 
                 >
-                    &nbsp; | </motion.div>
-                <span className="text-white">&nbsp; ]</span>
-              </span></div>
-
-              <div><span>19</span><span className="ml-11 text-white">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;] </span> </div>
-              <div><span>20</span><span className="ml-11 text-white">&nbsp;&nbsp;&nbsp;&nbsp;{"\u007D"} </span> </div>
-              <div><span>21</span><span className="ml-11 text-white">{"\u007D"} </span> </div>
-              
+                    &nbsp;|&nbsp;</motion.div>
+                </span>
+                {"},"}
+              </span>
+            </div>
+            <div className="flex">
+              <span>18</span>
+              &nbsp;{" "}&nbsp;{" "}&nbsp;{" "}&nbsp;{" "}&nbsp;&nbsp;&nbsp;
+              <span className="text-white">{"]"}</span>
+            </div>
+            <div className="flex">
+              <span>19</span>
+              &nbsp;{" "}&nbsp;{" "}&nbsp;{" "}&nbsp;{" "}&nbsp;
+              <span className="text-white">{"}"}</span>
+            </div>
+            <div className="flex">
+              <span>20</span>
+              &nbsp;{" "}&nbsp;{" "}&nbsp;{" "}
+              <span className="text-white">{"}"}</span>
+            </div>
           </div>
         </div>
-        
       </div>
     </section>
-  )
-}
-export default About
-
+  );
+};
+export default About;
 
 /*
-
     <section id="about" className="w-full h-[1100px] bg-[#181527] p-5 flex">
       <div className="h-full w-full flex">
         <div className=" mx-auto h-full flex sm:w-[500px] xl:w-[1000px] w-[100px]">

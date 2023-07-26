@@ -1,13 +1,16 @@
 'use client'
 
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import menu from "../../public/svg/menu.svg";
 import close from "../../public/svg/close.svg";
 import Image from "next/image";
 
 
-const NavBar = () => {
 
+const NavBar = ({dot, border}) => {
+  
+
+  
   const [prevScroll, setprevScroll] = useState(0)
   const [isActive, setIsActive] = useState("start");
   const [menutoggle, setMenutoggle] = useState(true)
@@ -37,8 +40,10 @@ const NavBar = () => {
   return (
     <nav id="navlist" className="flex p-4 items-center justify-between w-full top-0 fixed ease-in-out duration-500">
       <div 
-      className="flex cursor-pointer items-center"
+      className="flex items-center"
       onClick={() => window.scrollTo(0, 0)}
+      onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+            onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
       >
         <span className="text-3xl pri-col tracking-wider mr-1">&lt;</span>
         <span className="text-5xl tracking-wider">RITIK</span>
@@ -49,64 +54,68 @@ const NavBar = () => {
           <a
             className={`${
               isActive === "start" ? "active" : "deactivate"
-            } cursor-pointer hover:${
+            } cursor-none hover:${
               isActive !== "start" ? "text-gray-400" : "activate"
             } mr-3`}
             href="#home"
             onClick={() => {
               setIsActive("start");
             }}
+            onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+            onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
           >
             Start/&gt;
           </a>
           <a
             className={`${
               isActive === "work" ? "active" : "deactivate"
-            } cursor-pointer hover:${
-              isActive !== "start" ? "text-gray-400" : "activate"} mr-3`}
+            } cursor-none hover:${isActive !== "work" ? "text-[#c7c2c2]" : "activate"} mr-3`}
             href="#work"
             onClick={() => {
               setIsActive("work");
             }}
+            onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+            onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
           >
             Work/&gt;
           </a>
           <a
             className={`${
               isActive === "lab" ? "active" : "deactivate"
-            } cursor-pointer hover:${
-              isActive !== "lab" ? "text-gray-400" : "activate"
+            } cursor-none hover:${isActive !== "lab" ? "text-[#c7c2c2]" : "activate"}
             } mr-3`}
             href="#lab"
             onClick={() => {
               setIsActive("lab");
             }}
+            onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+            onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
           >
             Lab/&gt;
           </a>
           <a
             className={`${
               isActive === "about" ? "active" : "deactivate"
-            } cursor-pointer hover:${
-              isActive !== "about" ? "text-gray-400" : "activate"
-            } mr-3`}
+            } cursor-none hover:${isActive !== "about" ? "text-[#c7c2c2]" : "activate"} mr-3`}
             href="#about"
             onClick={() => {
               setIsActive("about");
             }}
+            onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+            onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
           >
             About/&gt;
           </a>
           <a
             className={`${
               isActive === "contact" ? "active" : "deactivate"
-            } cursor-pointer hover:${
-              isActive !== "contact" ? "text-gray-400" : "activate"
-            }`}
+            } cursor-none hover:${isActive !== "contact" ? "text-[#c7c2c2]" : "activate"}`}
             href="#contact"
             onClick={() => {
               setIsActive("contact");
             }}
+            onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+            onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
           >
             Contact/&gt;
           </a>

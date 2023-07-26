@@ -113,6 +113,7 @@ body{
   top: -0px;
 }
 
+
 .cursor-border {
   position: fixed;
   width: 25px;
@@ -124,6 +125,7 @@ body{
   pointer-events: none;
   transform: translate(-50%, -50%);
   z-index: 1;
+  
 }
 
 .cursor-point {

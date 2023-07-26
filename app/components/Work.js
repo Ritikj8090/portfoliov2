@@ -9,11 +9,11 @@ import Image from "next/image";
 import github from "../../public/svg/github.svg";
 import loading from "../../public/svg/loading.svg";
 
-const Work = () => {
+const Work = ({dot, border}) => {
   return (
     <section
       id="work"
-      className="h-[1800px] md:h-[900px] bg-[#181527]  overflow-hidden"
+      className="lg:h-full h-[1700px]  bg-[#181527]  overflow-hidden"
     >
       <div id="work1" className="relative p-5">
         <div className="flex xl:mx-auto ml-10 w-[1200px]">
@@ -32,13 +32,15 @@ const Work = () => {
         </div>
         <div className="w-full h-full">
           <div className="flex flex-wrap h-[400px]">
-            <div className="mx-auto">
+            <div className="mx-auto" >
               <Tilt tiltMaxAngleX={25} tiltMaxAngleY={25} perspective={1000}>
                 <motion.div
+                  onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+                  onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
                   initial={{ x: -100, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ type: "spring", delay: 0.2 }}
-                  className="flex m-5 relative cursor-pointer"
+                  className="flex m-5 relative cursor-none"
                   onClick={() => {window.open("https://portfolio-iota-amber-56.vercel.app/")}}
                 >
                   <Image
@@ -62,10 +64,12 @@ const Work = () => {
             <div className="mx-auto flex justify-between items-end">
               <Tilt tiltMaxAngleX={25} tiltMaxAngleY={25} perspective={1000}>
                 <motion.div
+                  onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+                  onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
                   initial={{ x: -100, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ type: "spring", delay: 0.2 }}
-                  className="flex m-5 relative cursor-pointer"
+                  className="flex m-5 relative cursor-none"
                   onClick={() => {window.open("https://movie-search-six-omega.vercel.app/")}}
                 >
                   <Image src={search} alt="a" className="h-[270px] w-[460px]" />
@@ -83,10 +87,12 @@ const Work = () => {
             <div className="mx-auto flex justify-center items-center">
               <Tilt tiltMaxAngleX={25} tiltMaxAngleY={25} perspective={1000}>
                 <motion.div
+                  onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+                  onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
                   initial={{ x: -100, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ type: "spring", delay: 0.2 }}
-                  className="flex m-5 relative cursor-pointer"
+                  className="flex m-5 relative cursor-none"
                   onClick={() => {window.open("https://movix-omega-sandy.vercel.app/")}}
                 >
                   <Image src={movix} alt="a" className="h-[420px] w-[290px]" />
@@ -95,7 +101,7 @@ const Work = () => {
                     <div className="border-2 w-32 my-3"></div>
                     <div>&nbsp;&nbsp;03</div>
                   </div>
-                  <div className="absolute right-5 top-5 cursor-pointer" onClick={() => {window.open("https://github.com/Ritikj8090/Movix")}}>
+                  <div className="absolute right-5 top-5 cursor-none" onClick={() => {window.open("https://github.com/Ritikj8090/Movix")}}>
                     <Image className="h-10 w-10" src={github} alt="github"/>
                   </div>
                 </motion.div>
@@ -108,10 +114,12 @@ const Work = () => {
             <div className="mx-auto">
               <Tilt tiltMaxAngleX={25} tiltMaxAngleY={25} perspective={1000}>
                 <motion.div
+                  onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+                  onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
                   initial={{ x: -100, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ type: "spring", delay: 0.2 }}
-                  className="flex m-5 relative cursor-pointer"
+                  className="flex m-5 relative cursor-none"
                   onClick={() => {window.open("https://portfolio-iota-amber-56.vercel.app/")}}
                 >
                   <Image
@@ -126,7 +134,7 @@ const Work = () => {
                     <div className="border-2 w-32 my-3"></div>
                     <div>&nbsp;&nbsp;04</div>
                   </div>
-                  <div className="absolute right-5 top-5 cursor-pointer" onClick={() => {window.open("https://github.com/Ritikj8090/portfolio")}}>
+                  <div className="absolute right-5 top-5 cursor-none" onClick={() => {window.open("https://github.com/Ritikj8090/portfolio")}}>
                     <Image className="h-10 w-10" src={github} alt="github"/>
                   </div>
                 </motion.div>
@@ -135,10 +143,12 @@ const Work = () => {
             <div className="mx-auto flex justify-between items-end">
               <Tilt tiltMaxAngleX={25} tiltMaxAngleY={25} perspective={1000}>
                 <motion.div
+                  onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+                  onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
                   initial={{ x: -100, opacity: 0 }}
                   whileInView={{ x: 0, opacity: 1 }}
                   transition={{ type: "spring", delay: 0.2 }}
-                  className="flex m-5 relative cursor-pointer"
+                  className="flex m-5 relative cursor-none"
                   onClick={() => {window.open("https://portfolio-iota-amber-56.vercel.app/")}}
                 >
                   <Image src={loading} alt="a" className="h-[270px] w-[460px]" />

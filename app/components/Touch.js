@@ -1,7 +1,7 @@
 import Image from "next/image";
 import close from "../../public/svg/close.svg";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import ThankYou from "./ThankYou";
 
 const Touch = ({ className, setClassName, border }) => {

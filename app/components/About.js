@@ -13,12 +13,19 @@ const About = () => {
     minute: date.getMinutes(),
     second: date.getSeconds(),
   }
+  const [second, setsecond] = useState(1)
+  useEffect(() => {
+    const sec = setInterval(() => {
+      setsecond(date.getSeconds())
+    },[1000])
+    return () => {clearInterval(sec)}
+  },[second])
   
   
 
   return (
-    <section id="about" className="h-full bg-[#181527] overflow-auto">
-      <div id="about1" className="relative p-5">
+    <section id="about" className="h-full bg-[#181527] overflow-auto ">
+      <div className=" p-5">
         <div className="xl:mx-auto ml-10 xl:w-[1200px]">
           <div className="circle w-[11px] h-[11px] border-[#5918df] border-[2px] solid rounded-full -m-[5px] -my-[9px]"></div>
 
@@ -32,7 +39,7 @@ const About = () => {
               About/&gt;
             </motion.div>
           </div>
-          <div className="-ml-7 deactivate font-bold text-[13px] sm:text-[17px] font-mono">
+          <div className=" -ml-7 deactivate font-bold text-[13px] sm:text-[17px] font-mono">
             <div>
               <span>01</span>
               <span className="ml-11 text-blue-600">class</span>{" "}
@@ -83,7 +90,7 @@ const About = () => {
                 <span className="text-red-500">
                   ={" "}
                   <span className="text-yellow-600">
-                    {time.year}Y:{time.month}M:{time.day}D:{time.hour}H:{time.minute}M
+                    {time.year}Y:{time.month}M:{time.day}D:{time.hour}H:{time.minute}M:{second}S
                   </span>
                 </span>
               </span>

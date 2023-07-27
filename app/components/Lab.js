@@ -1,10 +1,11 @@
 "use client";
 import { motion } from "framer-motion";
 
-const Lab = () => {
+const Lab = ({dot, border}) => {
   return (
     <section id="lab" className=" w-full h-full overflow-hidden">
-      <div className="relative p-5">
+      <div id="lab1" className="relative p-5"></div>
+      <div className=" p-5">
         <div className=" xl:mx-auto ml-10 w-[1200px]">
           <div className="circle w-[11px] h-[11px] border-[#5918df] border-[2px] solid rounded-full -m-[5px] -my-[9px]"></div>
 

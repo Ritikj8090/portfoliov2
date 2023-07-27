@@ -7,14 +7,19 @@ import github from "../../public/svg/github.svg";
 import facebook from "../../public/svg/facebook.svg";
 import instagram from "../../public/svg/instagram.svg";
 import Image from "next/image";
+import Touch from "./Touch";
+import { useState } from "react";
 
 const Contact = ({dot, border}) => {
+
+  const [ClassName, setClassName] = useState("invisible")
+
   return (
     <section id="contact" className="h-full bg-[#0f0d15] overflow-hidden">
       <div id="wor" className="relative p-5">
         <div className="xl:mx-auto ml-10 w-[1200px]">
           <div className="circle w-[11px] h-[11px] border-[#5918df] border-[2px] solid rounded-full -m-[5px] -my-[9px]"></div>
-
+          
           <div className="ml-7">
             <motion.div
               className="deactivate text-xl font-mono mb-5"
@@ -25,7 +30,7 @@ const Contact = ({dot, border}) => {
               Contact/&gt;
             </motion.div>
           </div>
-          <div className="ml-7">
+          <div className="ml-7 mt-20">
             <div className="text-2xl font-mono flex ">Find me on:</div>
             <div className="my-7 flex gap-7">
               <motion.div
@@ -81,9 +86,11 @@ const Contact = ({dot, border}) => {
                   onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
               whileHover={{ scale: 1.2 }}
               className="btn shadow rounded-3xl w-[200px] h-[50px] font-mono font-semibold px-2 py-2  text-xl cursor-none "
+              onClick={() => {setClassName("visible")}}
             >
               GET IN TOUCH
             </motion.button>
+            <div className=""><Touch className={ClassName} setClassName={setClassName} border={border}/></div>
           </div>
           <div className="ml-7 deactivate font-mono mt-10">
               Made with &lt;/&gt; by RiTik. 2023
@@ -91,6 +98,7 @@ const Contact = ({dot, border}) => {
         </div>
         
       </div>
+      
     </section>
   );
 };

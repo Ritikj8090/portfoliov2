@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { useEffect, useRef, useState } from "react";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -8,45 +8,41 @@ import NavBar from "./components/NavBar";
 import Work from "./components/Work";
 
 export default function Pome() {
+  const dotRef = useRef(null);
+  const borderRef = useRef(null);
+  const [mdot, setmdot] = useState({
+    doot: 0,
+    pooint: 0,
+  });
 
-    const dotRef = useRef(null);
-    const borderRef = useRef(null);
-    const [mdot, setmdot] = useState({
-      doot: 0,
-      pooint: 0,
-    })
+  useEffect(() => {
+    const dot = dotRef.current;
+    const border = borderRef.current;
+    setmdot({
+      doot: dotRef.current,
+      pooint: borderRef.current,
+    });
 
-    useEffect(() => {
-      const dot = dotRef.current;
-      const border = borderRef.current;
-      setmdot({
-        doot: dotRef.current,
-        pooint: borderRef.current,
-      })
+    window.addEventListener("mousemove", function (e) {
+      const posX = e?.clientX;
+      const posY = e?.clientY;
 
-      window.addEventListener("mousemove", function (e) {
+      dot.style.left = `${posX}px`;
+      dot.style.top = `${posY}px`;
 
-        const posX = e?.clientX;
-        const posY = e?.clientY;
-    
-        dot.style.left = `${posX}px`
-        dot.style.top = `${posY}px`
-    
-        border.style.left = `${posX}px`
-        border.style.top = `${posY}px`
-        
-    
-        border.animate({
+      border.style.left = `${posX}px`;
+      border.style.top = `${posY}px`;
+
+      border.animate(
+        {
           left: `${posX}px`,
-          top: `${posY}px`
-        }, { duration: 500, fill: "forwards"})
-      })
-    }, []);
-  
-    
+          top: `${posY}px`,
+        },
+        { duration: 500, fill: "forwards" }
+      );
+    });
+  }, []);
 
-  
-    
   return (
     <>
       <div ref={borderRef} className="cursor-border"></div>
@@ -61,4 +57,3 @@ export default function Pome() {
     </>
   );
 }
-

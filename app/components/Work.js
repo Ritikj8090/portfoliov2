@@ -12,10 +12,12 @@ import loading from "../../public/svg/loading.svg";
 const Work = ({dot, border}) => {
   return (
     <section
-      id="work"
+      id="work" 
       className="lg:h-full h-[1700px]  bg-[#181527]  overflow-hidden"
+      
     >
-      <div id="work1" className="relative p-5">
+      <div id="work1" className="relative p-5"></div>
+      <div className=" p-5">
         <div className="flex xl:mx-auto ml-10 w-[1200px]">
           <div className="circle w-[11px] h-[11px] border-[#5918df] border-[2px] solid rounded-full -m-[5px] -my-[9px]"></div>
 

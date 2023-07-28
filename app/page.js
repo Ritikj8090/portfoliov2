@@ -6,6 +6,8 @@ import Home from "./components/Home";
 import Lab from "./components/Lab";
 import NavBar from "./components/NavBar";
 import Work from "./components/Work";
+import Coding from "./components/Coding";
+import Resume from "./components/Resume";
 
 export default function Pome() {
   const dotRef = useRef(null);
@@ -50,10 +52,16 @@ export default function Pome() {
       <NavBar dot={mdot.doot} border={mdot.pooint} />
       <Home dot={mdot.doot} border={mdot.pooint} />
       <Work dot={mdot.doot} border={mdot.pooint} />
+      
       <Lab dot={mdot.doot} border={mdot.pooint} />
       <About dot={mdot.doot} border={mdot.pooint} />
+      <Resume dot={mdot.doot} border={mdot.pooint}  />
       <Contact dot={mdot.doot} border={mdot.pooint} />
       
     </>
   );
 }
+
+/*
+<Coding dot={mdot.doot} border={mdot.pooint} />
+ */

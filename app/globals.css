@@ -48,7 +48,7 @@ body{
 
 .gradient{
   background-image:
-			linear-gradient(to bottom left, rgba(0, 0, 0.5, 0), rgba(0, 0, 0, 0.7));
+			linear-gradient(to bottom left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.7));
 }
 
 .btn {

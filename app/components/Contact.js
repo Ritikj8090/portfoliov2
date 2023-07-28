@@ -6,6 +6,9 @@ import twitter from "../../public/svg/twitter.svg";
 import github from "../../public/svg/github.svg";
 import facebook from "../../public/svg/facebook.svg";
 import instagram from "../../public/svg/instagram.svg";
+import codechef1 from "../../public/svg/codechef1.svg";
+import codeforces1 from "../../public/svg/codeforces1.svg";
+import leetcode1 from "../../public/svg/leetcode1.svg";
 import Image from "next/image";
 import Touch from "./Touch";
 import { useState } from "react";
@@ -17,7 +20,7 @@ const Contact = ({dot, border}) => {
   return (
     <section id="contact" className="h-full bg-[#0f0d15] overflow-hidden">
       <div id="wor" className="relative p-5">
-        <div className="xl:mx-auto ml-10 w-[1200px]">
+        <div className="xl:mx-auto ml-10 w-full xl:w-[1200px]">
           <div className="circle w-[11px] h-[11px] border-[#5918df] border-[2px] solid rounded-full -m-[5px] -my-[9px]"></div>
           
           <div className="ml-7">
@@ -32,7 +35,7 @@ const Contact = ({dot, border}) => {
           </div>
           <div className="ml-7 mt-20">
             <div className="text-2xl font-mono flex ">Find me on:</div>
-            <div className="my-7 flex gap-7">
+            <div className="my-7 flex gap-7 flex-wrap">
               <motion.div
               onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
                   onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
@@ -79,7 +82,33 @@ const Contact = ({dot, border}) => {
               >
                 <Image src={facebook} alt="g" className="h-7 w-7 flex" />
               </motion.div>
-              
+              <motion.div
+              onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+                  onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+                whileHover={{ scale: 2 }}
+                className="  text-[#5918df] my-2 "
+                onClick={() => {window.open("https://www.codechef.com/users/ritikj713")}}
+              >
+                <Image src={codechef1} alt="l" className="h-7 w-7 flex" />
+              </motion.div>
+              <motion.div
+              onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+                  onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+                whileHover={{ scale: 2 }}
+                className="  text-[#5918df] my-2 "
+                onClick={() => {window.open("https://codeforces.com/profile/ritikj713")}}
+              >
+                <Image src={codeforces1} alt="l" className="h-7 w-7 flex" />
+              </motion.div>
+              <motion.div
+              onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+                  onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+                whileHover={{ scale: 2 }}
+                className="  text-[#5918df] my-2 "
+                onClick={() => {window.open("https://leetcode.com/Ritikj713/")}}
+              >
+                <Image src={leetcode1} alt="l" className="h-7 w-7 flex" />
+              </motion.div>
             </div>
             <motion.button
             onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}

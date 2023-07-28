@@ -21,7 +21,7 @@ const About = () => {
     return () => {clearInterval(sec)}
   },[second])
   
-  
+  const ritk = 123
 
   return (
     <section id="about" className="h-full bg-[#181527] overflow-auto ">

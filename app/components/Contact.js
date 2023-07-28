@@ -7,7 +7,7 @@ import github from "../../public/svg/github.svg";
 import facebook from "../../public/svg/facebook.svg";
 import instagram from "../../public/svg/instagram.svg";
 import codechef1 from "../../public/svg/codechef1.svg";
-import codeforces1 from "../../public/svg/codeforces1.svg";
+import codeforces1 from "../../public/svg/Codeforces1.svg";
 import leetcode1 from "../../public/svg/leetcode1.svg";
 import Image from "next/image";
 import Touch from "./Touch";

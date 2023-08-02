@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
-const About = () => {
+const About = ({dot, border}) => {
   const date = new Date();
   const time = {
     day: Math.abs(date.getDate() - 18),
@@ -189,7 +189,18 @@ const About = () => {
               &nbsp;{" "}&nbsp;{" "}&nbsp;{" "}&nbsp;{" "}&nbsp;
                 <span className="text-[#24e33a]">
                 {"'"}GIT{"', '"}JAVA{"', '"}C++
-                  {"', '"}Python{"', '"}JavaScript{"', '"}Docker{"',"}
+                  {"', '"}Python{"', '"}JavaScript{"', '"}Docker{"',"}Django{"',"}
+                  
+                </span>
+                {"},"}
+              </span>
+            </div>
+            <div className="flex">
+              <span>&nbsp;&nbsp;</span>
+              <span className="ml-11 text-white">
+              &nbsp;{" "}&nbsp;{" "}&nbsp;{" "}&nbsp;{" "}&nbsp;
+                <span className="text-[#24e33a]">
+                {"'"}MongoDB{"',"}
                   <motion.div 
                   className="text-white inline-block"
                   initial={{opacity:0 }}
@@ -215,6 +226,20 @@ const About = () => {
               <span>20</span>
               &nbsp;{" "}&nbsp;{" "}&nbsp;{" "}
               <span className="text-white">{"}"}</span>
+            </div>
+            <div className="flex">
+              <span>21</span>
+              &nbsp;{" "}&nbsp;{" "}&nbsp;{" "}
+              <motion.button
+            onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+                  onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+              whileHover={{ scale: 1.2 }}
+              className="btn text-white shadow  rounded-3xl w-[200px] h-[50px] font-mono font-semibold px-2 py-2  text-xl cursor-none "
+              onClick={() => window.open("/RITIK.pdf")}
+              download={true}
+            >
+              Download Resume
+            </motion.button>
             </div>
           </div>
         </div>

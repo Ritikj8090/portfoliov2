@@ -10,7 +10,7 @@ import TiltComponent from "./TiltComponent";
 
 const Resume = ({ dot, border }) => {
   return (
-    <section id="about" className={`h-full overflow-hidden bg-[#181527]`}>
+    <section id="resume" className={`h-full overflow-hidden bg-[#181527]`}>
       <div className=" p-5">
         <div className="xl:mx-auto ml-10 xl:w-[1200px]">
           <div className="circle w-[11px] h-[11px] border-[#5918df] border-[2px] solid rounded-full -m-[5px] -my-[9px]"></div>
@@ -209,7 +209,7 @@ const Resume = ({ dot, border }) => {
             onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
                   onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
               whileHover={{ scale: 1.2 }}
-              className="btn shadow rounded-3xl w-[200px] h-[50px] font-mono font-semibold px-2 py-2  text-xl cursor-none "
+              className="btn shadow my-10 rounded-3xl w-[200px] h-[50px] font-mono font-semibold px-2 py-2  text-xl cursor-none "
               onClick={() => window.open("/RITIK.pdf")}
               download={true}
             >

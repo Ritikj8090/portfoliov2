@@ -60,7 +60,6 @@ body{
   background: linear-gradient(90deg, #7462ff, #4400e1, #0069e1, #55a9e0, #d2001a,  #f48e21, #23d5ab);
   animation: color 5s ease-in-out infinite;
   background-size: 500% 500%;
-  
 }
 
 
@@ -190,3 +189,21 @@ body{
 	font-size:12px;
 	
 }
+
+.pictureContainer {
+  
+  overflow: hidden;
+
+  -webkit-transition: all .5s ease-in-out;
+          -moz-transition: all .5s ease-in-out;
+          -o-transition: all .5s ease-in-out;
+           transition: all .5s ease-in-out;
+}
+
+.pictureContainer:hover{
+  width: 100%;
+  transition: transform .2s ease-in-out;
+  
+}
+
+

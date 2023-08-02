@@ -51,11 +51,12 @@ export default function Pome() {
       <div ref={dotRef} className="cursor-point"></div>
       <NavBar dot={mdot.doot} border={mdot.pooint} />
       <Home dot={mdot.doot} border={mdot.pooint} />
+      
       <Work dot={mdot.doot} border={mdot.pooint} />
       
-      <Lab dot={mdot.doot} border={mdot.pooint} />
+
       <About dot={mdot.doot} border={mdot.pooint} />
-      <Resume dot={mdot.doot} border={mdot.pooint}  />
+      
       <Contact dot={mdot.doot} border={mdot.pooint} />
       
     </>
@@ -63,5 +64,7 @@ export default function Pome() {
 }
 
 /*
+      <Lab dot={mdot.doot} border={mdot.pooint} />
+<Resume dot={mdot.doot} border={mdot.pooint}  />
 <Coding dot={mdot.doot} border={mdot.pooint} />
  */

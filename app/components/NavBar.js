@@ -79,20 +79,7 @@ const NavBar = ({dot, border}) => {
           >
             Work/&gt;
           </a>
-          <a
-            className={`${
-              isActive === "lab" ? "active" : "deactivate"
-            } cursor-none hover:${isActive !== "lab" ? "text-[#c7c2c2]" : "activate"}
-            } mr-3`}
-            href="#lab"
-            onClick={() => {
-              setIsActive("lab");
-            }}
-            onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
-            onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
-          >
-            Lab/&gt;
-          </a>
+          
           <a
             className={`${
               isActive === "about" ? "active" : "deactivate"
@@ -196,3 +183,20 @@ const NavBar = ({dot, border}) => {
   );
 };
 export default NavBar;
+
+/*
+          <a
+            className={`${
+              isActive === "lab" ? "active" : "deactivate"
+            } cursor-none hover:${isActive !== "lab" ? "text-[#c7c2c2]" : "activate"}
+            } mr-3`}
+            href="#lab"
+            onClick={() => {
+              setIsActive("lab");
+            }}
+            onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+            onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+          >
+            Lab/&gt;
+          </a> 
+*/

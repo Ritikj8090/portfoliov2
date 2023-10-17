@@ -1,6 +1,6 @@
 import Image from "next/image";
 import { Tilt } from "react-tilt";
-
+ 
 export const TiltComponent_f = (props) => {
   return (
     <>

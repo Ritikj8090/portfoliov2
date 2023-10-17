@@ -4,7 +4,7 @@ import Image from "next/image";
 import smile from "../../public/svg/smile.svg";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-
+ 
 const Page = () => {
     const route = useRouter()
   const dotRef = useRef(null);

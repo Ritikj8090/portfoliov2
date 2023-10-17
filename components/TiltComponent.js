@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
-
+ 
 const TiltComponent = ({text ,className}) => {
   return (
     <motion.div className={`${className} h-fit w-fit`} whileHover={{ scale: 1.2 }}>

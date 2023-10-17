@@ -13,7 +13,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import SnakeGame from "./SnakeGame";
 
-const Lab = ({dot, border}) => {
+const Lab = ({dot, border}) => { 
     const route = useRouter()
   return (
     <section id="lab" className="h-full bg-[#0f0d15] overflow-hidden">

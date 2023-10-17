@@ -33,7 +33,7 @@ export default function Main() {
 
       border.style.left = `${posX}px`;
       border.style.top = `${posY}px`;
-
+ 
       border.animate(
         {
           left: `${posX}px`,

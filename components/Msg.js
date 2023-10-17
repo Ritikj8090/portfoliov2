@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-
+ 
 const name = [
     { msg: "Things"},
     { msg: "Things"},

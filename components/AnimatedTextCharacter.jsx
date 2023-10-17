@@ -34,7 +34,7 @@ const AnimatedTextCharacter = ({ text, delay }) => {
     },
   };
 
-  return (
+  return(
     <motion.span
       style={{ overflow: "hidden",}}
       variants={wordByword}

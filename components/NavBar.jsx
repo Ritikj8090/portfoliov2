@@ -3,7 +3,7 @@ import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import menu from "../public/svg/menu.svg";
 import close from "../public/svg/close.svg";
-
+ 
 const NavBar = ({dot, border}) => {
   const [prevScroll, setprevScroll] = useState(0);
   const [isActive, setIsActive] = useState("start");

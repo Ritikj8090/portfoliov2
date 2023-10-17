@@ -15,7 +15,7 @@ const Home = ({ dot, border }) => {
       const height = Math.max(
         body.scrollHeight,
         body.offsetHeight,
-        html.clientHeight,
+        html.clientHeight, 
         html.scrollHeight,
         html.offsetHeight
       );

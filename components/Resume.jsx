@@ -3,7 +3,7 @@ import React from 'react'
 import { motion } from "framer-motion";
 import { Tilt } from "react-tilt";
 import TiltComponent from "./TiltComponent";
-
+ 
 const Resume = ({ dot, border }) => {
   return (
     <section id="resume" className={`h-full overflow-hidden bg-[#181527]`}>

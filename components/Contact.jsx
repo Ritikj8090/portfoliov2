@@ -14,7 +14,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 const Contact = ({dot, border}) => {
-    const route = useRouter()
+    const route = useRouter() 
   return (
     <section id="contact" className="h-full bg-[#0f0d15] overflow-hidden">
       <div id="wor" className="relative p-5">

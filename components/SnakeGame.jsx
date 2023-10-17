@@ -1,6 +1,6 @@
 import React, { Component } from "react";
  // Import your CSS file
-
+ 
 class SnakeGame extends Component {
   constructor(props) {
     super(props);

@@ -1,5 +1,5 @@
 "use client";
-
+ 
 import { motion } from "framer-motion";
 import portfolio from "../public/images/portfolio.png";
 import movix from "../public/images/mo.png";

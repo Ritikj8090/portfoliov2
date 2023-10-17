@@ -8,12 +8,21 @@ const NavBar = ({dot, border}) => {
   const [prevScroll, setprevScroll] = useState(0);
   const [isActive, setIsActive] = useState("start");
   const [menutoggle, setMenutoggle] = useState(true);
-
   const handleScroll = () => {
     setprevScroll(window.scrollY);
+    if(prevScroll < 500){
+      setIsActive("start")
+    }
+    if(prevScroll > 500 && prevScroll < 1500){
+      setIsActive("work")
+    }
+    if(prevScroll > 1500 && prevScroll < 1900){
+      setIsActive("about")
+    }
     scroll();
   };
-
+  
+  console.log(prevScroll)
   useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => {
@@ -75,19 +84,7 @@ const NavBar = ({dot, border}) => {
           >
             Work/&gt;
           </a>
-          <a
-            className={`${
-              isActive === "lab" ? "active" : "deactivate"
-            } cursor-none hover:${isActive !== "lab" ? "activate" : "activate"} mr-3 ease-in-out duration-500`}
-            href="#lab"
-            onClick={() => {
-              setIsActive("lab");
-            }}
-            onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
-            onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
-          >
-            Lab/&gt;
-          </a>
+          
           <a
             className={`${
               isActive === "about" ? "active" : "deactivate"
@@ -100,6 +97,19 @@ const NavBar = ({dot, border}) => {
             onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
           >
             About/&gt;
+          </a>
+          <a
+            className={`${
+              isActive === "lab" ? "active" : "deactivate"
+            } cursor-none hover:${isActive !== "lab" ? "activate" : "activate"} mr-3 ease-in-out duration-500`}
+            href="#lab"
+            onClick={() => {
+              setIsActive("lab");
+            }}
+            onMouseEnter={() => {border.style = `width:50px; height:50px; border: 3px solid; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+            onMouseLeave={() => {border.style = `width:25px; height:25px; transition: ease-in-out .2s; mix-blend-mode: difference;`}}
+          >
+            Lab/&gt;
           </a>
           <a
             className={`${

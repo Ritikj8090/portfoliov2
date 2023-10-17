@@ -24,7 +24,7 @@ const About = ({dot, border}) => {
   const ritk = 12
 
   return (
-    <section id="about" className="h-full bg-[#181527] overflow-auto">
+    <section id="about" className="h-screen bg-[#181527] overflow-auto">
       <div className=" p-5">
         <div className="xl:mx-auto ml-10 xl:w-[1200px]">
           <div className="circle w-[11px] h-[11px] border-[#5918df] border-[2px] solid rounded-full -m-[5px] -my-[9px]"></div>

@@ -16,7 +16,7 @@ import SnakeGame from "./SnakeGame";
 const Lab = ({dot, border}) => { 
     const route = useRouter()
   return (
-    <section id="lab" className="h-full bg-[#0f0d15]">
+    <section id="lab" className="h-full bg-[#0f0d15] overflow-hidden">
       <div id="wor" className="relative p-5">
         <div className="xl:mx-auto ml-10 w-full xl:w-[1200px]">
           <div className="circle w-[11px] h-[11px] border-[#5918df] border-[2px] solid rounded-full -m-[5px] -my-[9px]"></div>
@@ -32,7 +32,9 @@ const Lab = ({dot, border}) => {
             </motion.div>
           </div>
           <div className="ml-7">
-           
+           <div className="deactivate">
+            COMMING SOON....
+           </div>
             
           </div>
           

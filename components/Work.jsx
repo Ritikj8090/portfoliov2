@@ -13,7 +13,7 @@ import github from "../public/svg/github.svg";
 
 const Work = ({dot, border}) => {
   return (
-    <section id="work" className=" overflow-hidden bg-[#181527] -z-10 h-screen">
+    <section id="work" className="lg:h-full h-[2000px] overflow-hidden bg-[#181527] -z-10">
         <div id="work1" className="relative p-5"></div>
       <div className=" p-5">
         <div className="flex xl:mx-auto ml-10 w-[1200px]">

@@ -4,11 +4,13 @@ import Contact from "@/components/Contact";
 import Home from "@/components/Home";
 import Lab from "@/components/Lab";
 import NavBar from "@/components/NavBar";
+import NewPage from "@/components/NewPage";
 import Resume from "@/components/Resume";
 import Work from "@/components/Work";
 import { useEffect, useRef, useState } from "react";
 
 export default function Main() {
+  
   const dotRef = useRef(null);
   const borderRef = useRef(null);
   const [mdot, setmdot] = useState({
@@ -47,6 +49,7 @@ export default function Main() {
     <>
       <div ref={borderRef} className="cursor-border"></div>
       <div ref={dotRef} className="cursor-point"></div>
+      <NewPage />
       <NavBar  dot={mdot.doot} border={mdot.pooint} />
       <Home dot={mdot.doot} border={mdot.pooint} />
       <Work dot={mdot.doot} border={mdot.pooint} />

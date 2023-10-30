@@ -12,16 +12,19 @@ import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import SnakeGame from "./SnakeGame";
+import Clock from "./DigitalClock/Clock";
+import { Tilt } from "react-tilt";
+import TicTacToc from "./TicTacToc/TicTacToc";
 
 const Lab = ({dot, border}) => { 
     const route = useRouter()
   return (
-    <section id="lab" className="h-full bg-[#0f0d15] overflow-hidden">
-      <div id="wor" className="relative p-5">
+    <section id="lab" className="h-full  overflow-hidden  relative">
+      <div id="wor" className=" p-5 -z-10">
         <div className="xl:mx-auto ml-10 w-full xl:w-[1200px]">
           <div className="circle w-[11px] h-[11px] border-[#5918df] border-[2px] solid rounded-full -m-[5px] -my-[9px]"></div>
           
-          <div className="ml-7">
+          <div className="ml-7 ">
             <motion.div
               className="deactivate text-xl font-mono mb-5"
               initial={{ y: -20, opacity: 0 }}
@@ -32,10 +35,12 @@ const Lab = ({dot, border}) => {
             </motion.div>
           </div>
           <div className="ml-7">
-           <div className="deactivate">
-            COMMING SOON....
-           </div>
+            <div className=" lg:flex">
             
+            <div className=" p-2 cursor-none h-[600px] w-[400px]">
+              <TicTacToc border={border}/>
+            </div>
+            </div>
           </div>
           
         </div>

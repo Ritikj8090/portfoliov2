@@ -10,7 +10,7 @@ const NewPage = () => {
     setfirst(true)
   }, 5000);
   setTimeout(() => {
-    route.push("http://portfolio-v2-production-3920.up.railway.app");
+    route.push("https://portfolio-v2-mi4h.vercel.app/");
   }, 8000);
   return (
     <>
